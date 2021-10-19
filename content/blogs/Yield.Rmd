@@ -5,7 +5,7 @@ categories:
 date: "2021-10-19"
 description: Here, we wanted to analyse yields
 draft: false
-image: FFM.jpg
+image: FFM2.jpg
 keywords: ""
 slug: Yield
 title: Yields analyses
