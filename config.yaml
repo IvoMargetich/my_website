@@ -85,7 +85,7 @@ params:
         subtitle: Here we analyse returns of financial stocks
         title: Returns of financial stocks
         url: blogs/FinancialAn
-      - image: pic02.jpg
+      - image: Ottakringer.jpg
         subtitle: What we can observe of CPI change over the past years
         title: Change of CPI and its components CPI 
         url: blogs/CPI
@@ -108,7 +108,6 @@ params:
   two:
     buttonText: Get Started
     enable: yes
-    subtitle: In a LBS class with contents very new I had the 
-    chance to work together with very bright people on some data analytics challenges - please find some here. 
+    subtitle: Collaboration with bright LBS students 
     title: Some projects
     url: blogs
