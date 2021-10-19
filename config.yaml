@@ -71,8 +71,8 @@ params:
         url: '#'
       - name: Projects
         url: blogs
-      - name: About me 
-        url: blogs/AboutMe
+      - name: About Ivo 
+        url: blogs/AboutIvo
    #   - name: Elements
     #    url: elements.html
     menu: Menu
@@ -89,10 +89,10 @@ params:
         subtitle: What we can observe of CPI change over the past years
         title: Change of CPI and its components CPI 
         url: blogs/CPI
-     # - image: pic03.jpg
-     #   subtitle: Lorem Etiam Nullam
-      #  title: Magna
-      #  url: blogs/magna
+      - image: FFM.jpg
+        subtitle: Analyses of Yields
+        title: Yield 
+        url: blogs/Yield
     #  - image: pic04.jpg
       #  subtitle: Nisl Sed Aliquam
        # title: Ipsum
@@ -108,6 +108,6 @@ params:
   two:
     buttonText: Get Started
     enable: yes
-    subtitle: Collaboration with bright LBS students 
+    subtitle: Collaboration with bright LBS students and information about me
     title: Some projects
     url: blogs
