@@ -5,7 +5,7 @@ categories:
 date: "2017-10-31T22:42:51-05:00"
 description: Here, we wanted to analyse the returns of financial stocks
 draft: false
-image: pic10.jpg
+image: FFM.jpg
 keywords: ""
 slug: FinancialAn
 title: Returns of financial stocks
@@ -318,8 +318,8 @@ number_companies_sector</code></pre>
 <pre class="r"><code>number_companies_sector %&gt;% 
   slice_max(order_by = number_of_companies, n=12) %&gt;% 
   ggplot(aes(x = number_of_companies, y = reorder(sector, number_of_companies))) + #plotting a bar plot that shows the number of campanies per sector
-  geom_col(fill=&#39;blue&#39;) +
-  theme_bw()+
+  geom_col(fill=&#39;black&#39;) +
+  theme_economist()+
   labs(
     title = &quot;Number of companies per sector&quot;,
     subtitle = &quot;Finance is the sector with most companies&quot;,
@@ -477,7 +477,7 @@ monthly_stock_performance</code></pre>
   ggplot(aes(monthly_returns))+
   geom_density()+
   facet_wrap(vars(symbol))+
-  theme_bw()+
+  theme_economist()+
   labs(
     title = &quot;Density plot for each stock from DJIA&quot;,
     subtitle = &quot;Stock monthly returns seem to follow a normal distribution &quot;,
@@ -488,10 +488,7 @@ monthly_stock_performance</code></pre>
 
 density_plot</code></pre>
 <p><img src="/blogs/FinancialAn_files/figure-html/density_monthly_returns-1.png" width="648" style="display: block; margin: auto;" /></p>
-<p>What can you infer from this plot? Which stock is the riskiest? The least risky?</p>
-<blockquote>
-<p>TYPE YOUR ANSWER AFTER (AND OUTSIDE!) THIS BLOCKQUOTE.</p>
-</blockquote>
+<p>What to infer from this plot? Which stock is the riskiest? The least risky?</p>
 <p>The spread of the curves corresponds to the volatility of the monthly returns. The higher the spread, thee higher the volatility of the monthly returns implying a greater risk for an investment. For example, companies like JNJ or SPY seems to have a small spread relative to other stocks. These stocks can be described as the least risky. Stocks like AAPL and DOW have the largest spread and therefore are considered as the riskist.</p>
 <p>The peak of the curve correspond to the potential return on investment , the higher the peak (which corresponds to the mean of the distribution, assuming that is normal), the higher the returns on these stocks. Companies like PG and SPY seems to have the highest potential.</p>
 <p>Finally, make a plot that shows the expected monthly return (mean) of a stock on the Y axis and the risk (standard deviation) in the X-axis. Please use <code>ggrepel::geom_text_repel()</code> to label each stock</p>
@@ -499,7 +496,7 @@ density_plot</code></pre>
   ggplot(aes(x=sd_monthly_return,y=mean_monthly_return,label=symbol))+
   geom_point(colour=&quot;red&quot;)+
   ggrepel::geom_text_repel()+ #to label each stock
-  theme_bw()+
+  theme_economist()+
   labs(
     title = &quot;Expected monthly return against risk&quot;,
     subtitle = &quot;We can see that this graph corresponds to an efficient frontier&quot;,
@@ -510,9 +507,6 @@ density_plot</code></pre>
 
 mean_vs_sd_plot</code></pre>
 <p><img src="/blogs/FinancialAn_files/figure-html/risk_return_plot-1.png" width="648" style="display: block; margin: auto;" /></p>
-<p>What can you infer from this plot? Are there any stocks which, while being riskier, do not have a higher expected return?</p>
-<blockquote>
-<p>TYPE YOUR ANSWER AFTER (AND OUTSIDE!) THIS BLOCKQUOTE.</p>
-</blockquote>
+<p>What to infer from this plot? Are there any stocks which, while being riskier, do not have a higher expected return?</p>
 <p>This plot allows us to understand better which stocks with a given level of risk, give a higher return. For example, IBM and V(VISA) have a similar risk level but V(VISA) offers a much higher return. CSCO for example has an approximate standard deviation of 0.097 and the same return of SPY which has a much lower risk. Therefore, this graph helps us making the best risk return combinations in terms of portfolio management.</p>
 </div>
