@@ -7,7 +7,7 @@ description: Here, we wanted to analyse yields
 draft: false
 image: FFM2.jpg
 keywords: ""
-slug: Yield
+slug: Yields
 title: Yields analyses
 ---
 
