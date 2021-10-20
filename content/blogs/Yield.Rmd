@@ -73,11 +73,6 @@ We are going to create three plots here.
 
 ### Yields on US rates by duration since 1960
 
-We first need to replicate the following sample.
-```{r yield_curve_1, echo=FALSE, out.width="100%"}
-knitr::include_graphics(here::here("images", "yield_curve1.png"), error = FALSE)
-```
-
 ```{r yield_curve_1: Yields on US rates by duration since 1960, out.width="100%",fig.width=15, fig.height=12}
 # unique(yield_curve$duration)
 yield_curve <- yield_curve %>%
@@ -107,11 +102,6 @@ ggplot(yield_curve,aes(x=date,y=value,color=duration))+
 ```
 
 ### Monthly yields on US rates by duration since 1999 on a year-by-year basis
-
-We then try to replicate the following graph.
-```{r yield_curve_2, echo=FALSE, out.width="100%"}
-knitr::include_graphics(here::here("images", "yield_curve2.png"), error = FALSE)
-```
 
 ```{r yield_curve_2: Monthly yields on US rates by duration since 1999 on a year-by-year basis,out.width="100%",fig.width=15, fig.height=12}
 yield_curve <- yield_curve %>%
@@ -147,11 +137,6 @@ yield_curve %>%
 
 
 ### 3-month and 10-year yields since 1999
-
-We then replicate the following plot for 3-month and 10-year yields.
-```{r yield_curve_3, echo=FALSE, out.width="100%"}
-knitr::include_graphics(here::here("images", "yield_curve3.png"), error = FALSE)
-```
 
 ```{r yield_curve_3: 3-month and 10-year yields since 1999,out.width="100%",fig.width=15, fig.height=12}
 yield_curve %>%
@@ -192,11 +177,6 @@ To create our final plot, we do the following steps:
 2. Plot the spread between 10 years and 3 months as a blue/red ribbon, blue for positive and red for negative
 3. Superimpose recessions as the grey areas in our plot
 4. Plot the rugs on x-axis
-
-The sample is as follows:
-```{r yield_curve_challenge, echo=FALSE, out.width="100%"}
-knitr::include_graphics(here::here("images", "yield_curve_challenge.png"), error = FALSE)
-```
 
 We get the recession data first.
 ```{r setup_US-recessions, warning=FALSE}
